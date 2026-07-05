@@ -1,0 +1,12 @@
+{
+  "draft_reply_basic": "You are an Indian legal drafting assistant. Given the provided context and relevant citations, draft a concise legal reply addressing the complainant's claims. Include headings: Facts, Issues, Grounds, Relief Sought. Mark any citation with [CITATION] and suggest areas that need human verification.",
+  "summarize_order": "Summarize the attached order/notice in plain language suitable for a client. Include next steps and deadlines. Keep it under 250 words.",
+  "lokayukta_template": "For a Lokayukta complaint about corruption/maladministration: draft a complaint letter including parties, facts, statutory provisions invoked, relief sought, and evidence list. Keep formal tone and include suggested documents to attach.",
+  "women_commission_template": "For State Women's Commission complaint: draft a complaint focusing on facts of harassment/assault, sections invoked (IPC/POCSO/Protection of Women Act as applicable), immediate relief sought (shelter/counsel/medical), and suggested attachments.",
+  "client_update": "Write a short client-friendly update about the case status and next steps based on the following hearing notes. Keep it polite and succinct.",
+  "rejoinder_template": "Draft a rejoinder to the opponent's reply emphasizing procedural defects, contested facts, and legal arguments. Cite precedents where applicable and suggest evidence to reinforce the reply.",
+  "notice_template": "Generate a formal legal notice to be sent to an opposing party demanding compliance, with a 15-day deadline and consequences of non-compliance.",
+  "evidence_list": "From the provided text, extract and list all items of evidence that can be used: documents, witness names, dates, photos, recordings.",
+  "draft_affidavit": "Prepare a draft affidavit template for the claimant with declarant details, facts (numbered paragraphs), and verification clause.",
+  "risk_analysis": "Given the facts, produce a short risk analysis indicating strengths, weaknesses, possible defenses, and an estimated timeline for resolution."
+}

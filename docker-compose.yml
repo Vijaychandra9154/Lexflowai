@@ -1,0 +1,26 @@
+version: '3.8'
+services:
+  backend:
+    build: ./backend
+    ports:
+      - '8000:8000'
+    environment:
+      - DATABASE_URL=sqlite:///./lexflowai.db
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - OPENAI_MODEL=${OPENAI_MODEL}
+      - EMBED_MODEL=${EMBED_MODEL}
+      - PINECONE_API_KEY=${PINECONE_API_KEY}
+      - PINECONE_ENVIRONMENT=${PINECONE_ENVIRONMENT}
+      - PINECONE_INDEX_NAME=${PINECONE_INDEX_NAME}
+      - JWT_SECRET=${JWT_SECRET}
+    volumes:
+      - ./backend:/app
+
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - '3000:3000'
+    command: sh -c "npm install && npm run dev"
+    volumes:
+      - ./frontend:/app
