@@ -1,12 +1,116 @@
 {
   "draft_reply_basic": "You are an Indian legal drafting assistant. Given the provided context and relevant citations, draft a concise legal reply addressing the complainant's claims. Include headings: Facts, Issues, Grounds, Relief Sought. Mark any citation with [CITATION] and suggest areas that need human verification.",
   "summarize_order": "Summarize the attached order/notice in plain language suitable for a client. Include next steps and deadlines. Keep it under 250 words.",
-  "lokayukta_template": "For a Lokayukta complaint about corruption/maladministration: draft a complaint letter including parties, facts, statutory provisions invoked, relief sought, and evidence list. Keep formal tone and include suggested documents to attach.",
-  "women_commission_template": "For State Women's Commission complaint: draft a complaint focusing on facts of harassment/assault, sections invoked (IPC/POCSO/Protection of Women Act as applicable), immediate relief sought (shelter/counsel/medical), and suggested attachments.",
   "client_update": "Write a short client-friendly update about the case status and next steps based on the following hearing notes. Keep it polite and succinct.",
   "rejoinder_template": "Draft a rejoinder to the opponent's reply emphasizing procedural defects, contested facts, and legal arguments. Cite precedents where applicable and suggest evidence to reinforce the reply.",
   "notice_template": "Generate a formal legal notice to be sent to an opposing party demanding compliance, with a 15-day deadline and consequences of non-compliance.",
   "evidence_list": "From the provided text, extract and list all items of evidence that can be used: documents, witness names, dates, photos, recordings.",
   "draft_affidavit": "Prepare a draft affidavit template for the claimant with declarant details, facts (numbered paragraphs), and verification clause.",
-  "risk_analysis": "Given the facts, produce a short risk analysis indicating strengths, weaknesses, possible defenses, and an estimated timeline for resolution."
+  "risk_analysis": "Given the facts, produce a short risk analysis indicating strengths, weaknesses, possible defenses, and an estimated timeline for resolution.",
+
+  "institutions": {
+    "Lokayuktha": {
+      "full_name": "Lokayuktha (State Anti-Corruption Ombudsman)",
+      "addressee": "The Lokayuktha\n[State Name]",
+      "relevant_acts": [
+        "Prevention of Corruption Act, 1988",
+        "Lokayuktha Act of the respective State",
+        "Indian Penal Code, 1860 (for relevant offences)"
+      ],
+      "required_sections": ["To", "Subject", "Facts", "Grounds", "Prayer", "List of Annexures", "Verification", "Place/Date/Signature"],
+      "special_instructions": "Mention specific sections of the Prevention of Corruption Act if corrupt conduct is alleged. Clearly identify the public servant and the department. Describe the acts of omission, commission, or maladministration with specific dates and amounts. Request inquiry and departmental/criminal action. Include a list of supporting documents (FIR copy, written complaints, receipts, etc.)."
+    },
+
+    "National Human Rights Commission (NHRC)": {
+      "full_name": "National Human Rights Commission (NHRC)",
+      "addressee": "The Registrar\nNational Human Rights Commission\nManav Adhikar Bhawan, C-Block, GPO Complex, INA\nNew Delhi – 110 023",
+      "relevant_acts": [
+        "Protection of Human Rights Act, 1993",
+        "Article 21 of the Constitution of India (Right to Life and Personal Liberty)",
+        "Article 14 (Right to Equality)",
+        "Article 19 (Freedom of Speech and Expression)"
+      ],
+      "required_sections": ["To", "Subject", "Complainant Details", "Respondent Details", "Facts", "Human Rights Violations", "Grounds", "Prayer", "List of Annexures", "Verification", "Place/Date/Signature"],
+      "special_instructions": "NHRC has jurisdiction over human rights violations by State agents (police, government officials, armed forces). Clearly cite Article 21 or other constitutional provisions violated. Complaints must be filed within one year of the incident. Attach copies of previous complaints to police/authorities. Specifically pray for compensation, inquiry, or action against erring officials."
+    },
+
+    "State Human Rights Commission (SHRC)": {
+      "full_name": "State Human Rights Commission (SHRC)",
+      "addressee": "The Registrar\nState Human Rights Commission\n[State Name]",
+      "relevant_acts": [
+        "Protection of Human Rights Act, 1993 (Section 36 — State Commissions)",
+        "Article 21 of the Constitution of India",
+        "Article 14 of the Constitution of India"
+      ],
+      "required_sections": ["To", "Subject", "Complainant Details", "Respondent Details", "Facts", "Human Rights Violations", "Grounds", "Prayer", "List of Annexures", "Verification", "Place/Date/Signature"],
+      "special_instructions": "SHRC has jurisdiction over state-level human rights violations. Mirror NHRC format but address to the state body. Clearly specify that the violating agency is a state government department. Mention whether an NHRC complaint has also been filed (to establish parallel proceedings)."
+    },
+
+    "State Women's Commission": {
+      "full_name": "State Women's Commission",
+      "addressee": "The Chairperson\nState Women's Commission\n[State Name]",
+      "relevant_acts": [
+        "Protection of Women from Domestic Violence Act, 2005",
+        "Sexual Harassment of Women at Workplace (Prevention, Prohibition and Redressal) Act, 2013",
+        "Indian Penal Code — Sections 354, 375, 376, 498A as applicable",
+        "POCSO Act, 2012 (if minor involved)",
+        "Dowry Prohibition Act, 1961"
+      ],
+      "required_sections": ["To", "Subject", "Complainant Details", "Respondent / Accused Details", "Facts", "Nature of Violation", "Grounds", "Immediate Relief Sought", "Long-term Prayer", "List of Annexures", "Verification", "Place/Date/Signature"],
+      "special_instructions": "Focus on the specific nature of harassment, assault, or discrimination. Reference the applicable IPC/special act sections. Request immediate relief (shelter, medical aid, protection order) where applicable. Include details of any prior police complaints and their outcome. If the complainant cannot personally appear, state reasons."
+    },
+
+    "District Consumer Forum": {
+      "full_name": "District Consumer Disputes Redressal Commission",
+      "addressee": "The President\nDistrict Consumer Disputes Redressal Commission\n[District Name], [State Name]",
+      "relevant_acts": [
+        "Consumer Protection Act, 2019",
+        "Consumer Protection (E-Commerce) Rules, 2020 (if online transaction)",
+        "Relevant sector-specific laws (e.g., RERA for real estate, Insurance Act for insurance disputes)"
+      ],
+      "required_sections": ["To", "Consumer Complaint No.", "Complainant Details", "Opposite Party Details", "Facts & Cause of Action", "Deficiency in Service / Unfair Trade Practice", "Grounds", "Relief / Prayer", "List of Annexures", "Affidavit", "Place/Date/Signature"],
+      "special_instructions": "Pecuniary jurisdiction: District Commission handles claims up to Rs. 50 lakhs. Clearly state the value of goods/services and the compensation claimed. Mention the specific deficiency in service or unfair trade practice. File within 2 years of cause of action (mention if delayed and state reason). Attach purchase receipts, warranty cards, correspondence with opposite party, and rejection letter if any."
+    },
+
+    "District Court": {
+      "full_name": "District Court",
+      "addressee": "The Hon'ble District Judge\n[District Name] District Court\n[State Name]",
+      "relevant_acts": [
+        "Code of Civil Procedure, 1908 (for civil suits)",
+        "Code of Criminal Procedure, 1973 (for criminal matters)",
+        "Specific Relief Act, 1963 (for injunctions and specific performance)",
+        "Indian Evidence Act, 1872"
+      ],
+      "required_sections": ["Court Name", "Case No.", "Plaintiff / Petitioner Details", "Defendant / Respondent Details", "Cause Title", "Facts", "Cause of Action", "Jurisdiction", "Valuation & Court Fees", "Grounds", "Prayer", "List of Annexures", "Verification", "Place/Date/Signature of Advocate"],
+      "special_instructions": "Specify whether the matter is civil or criminal. For civil suits, mention the territorial jurisdiction basis (CPC Order VII Rule 1). Calculate and state the court fee payable based on the claim value. For injunction applications, separately state urgency and irreparable harm. All facts must be in numbered paragraphs. An advocate's signature with enrollment number is required for formal plaints."
+    },
+
+    "RTI Officer (Right to Information)": {
+      "full_name": "Right to Information Application to CPIO/SPIO",
+      "addressee": "The Central Public Information Officer (CPIO) / State Public Information Officer (SPIO)\n[Department/Ministry Name]\n[Office Address]",
+      "relevant_acts": [
+        "Right to Information Act, 2005",
+        "Section 6 — Application for obtaining information",
+        "Section 7 — Disposal of request",
+        "Section 19 — Appeal provisions"
+      ],
+      "required_sections": ["To", "Subject", "Applicant Details", "Information Sought (numbered points)", "Application Fee Statement", "Place/Date/Signature"],
+      "special_instructions": "RTI applications must be addressed to the correct CPIO/SPIO of the public authority. Application fee is Rs. 10/- (rupees ten only) payable by IPO (Indian Postal Order), demand draft, or court fee stamp as prescribed by the authority. Below Poverty Line (BPL) applicants are exempt — attach BPL certificate. State each piece of information sought as a separate numbered point. Do NOT seek opinions, advice, or explanations — only factual information held by the authority. The authority must respond within 30 days (48 hours for life/liberty matters). NEVER invent sections beyond Section 6, 7, and 19 of the RTI Act without verification."
+    },
+
+    "Labour Commissioner": {
+      "full_name": "Office of the Labour Commissioner",
+      "addressee": "The Labour Commissioner\n[District / Regional Office]\n[State Name]",
+      "relevant_acts": [
+        "Industrial Disputes Act, 1947",
+        "Minimum Wages Act, 1948",
+        "Payment of Wages Act, 1936",
+        "Employees' Provident Funds and Miscellaneous Provisions Act, 1952",
+        "Payment of Gratuity Act, 1972",
+        "Contract Labour (Regulation and Abolition) Act, 1970"
+      ],
+      "required_sections": ["To", "Subject", "Complainant / Worker Details", "Employer / Establishment Details", "Nature of Employment", "Facts", "Grievance Description", "Grounds", "Relief / Prayer", "List of Annexures", "Verification", "Place/Date/Signature"],
+      "special_instructions": "Identify the specific labour law violated. For wage disputes, mention the period, amount due, and prescribed minimum wage for the category. For PF/ESI matters, cite EPFO/ESIC UAN/IP numbers if available. For wrongful termination, describe the circumstances, notice period given (or not given), and retrenchment compensation sought. For contract labour issues, identify both the principal employer and the contractor. Attach employment letter/appointment order, wage slips, PF passbook excerpts, and any prior written communication with employer."
+    }
+  }
 }

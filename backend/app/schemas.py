@@ -17,4 +17,4 @@ class CaseOut(BaseModel):
     metadata: Optional[Dict]
 
     class Config:
-        orm_mode = True
+        from_attributes = True

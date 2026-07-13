@@ -1,0 +1,12 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+# NEXT_PUBLIC_BACKEND_URL must be set in Netlify dashboard → Site settings → Environment variables
+# Value: https://lexflowai-backend.onrender.com  (your Render backend URL)

@@ -20,4 +20,5 @@ beautifulsoup4
 bs4
 langchain
 pinecone-client
-passlib[bcrypt]
+anthropic
+pypdf

@@ -1,8 +1,41 @@
+# Python
 __pycache__/
-venv/
-.env
-node_modules/
-lexflowai.db
-.DS_Store
 *.pyc
+*.pyo
+venv/
+.venv/
+*.egg-info/
+dist/
+build/
+
+# Env
+.env
+.env.local
+.env.production
+
+# Database
+*.db
+*.sqlite3
+
+# Node
+node_modules/
+.next/
+.netlify/
+out/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Test coverage
 coverage/
+.pytest_cache/
+htmlcov/
